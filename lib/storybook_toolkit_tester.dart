@@ -16,6 +16,7 @@ Future<void> testStorybook(
   Storybook storybook, {
   Set<Device> devices = const {Device.pixel5, Device.iPhone8, Device.iPhone13},
   bool Function(Story story)? filterStories,
+  String rootPath = 'goldens',
 }) async {
   AdaptiveTestConfiguration.instance.setDeviceVariants({
     for (Device device in devices)
@@ -58,7 +59,10 @@ Future<void> testStorybook(
         //await tester.expectGolden(variant);
         //await tester.tap(find.byKey(ValueKey("TestField")));
         if (story.loadDuration != null) await tester.pumpAndSettle(story.loadDuration!);
-        await tester.expectGolden<dynamic>(variant, pathBuilder: () => "goldens/${story.name.snakeCase}/${variant.name.snakeCase}.png");
+        await tester.expectGolden<dynamic>(
+          variant,
+          pathBuilder: (_) => "$rootPath/${story.name.snakeCase}/${variant.name.snakeCase}.png",
+        );
       },
       tags: ['storybook'],
     );
