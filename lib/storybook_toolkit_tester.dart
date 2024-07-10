@@ -6,6 +6,7 @@ import 'dart:async';
 
 import 'package:adaptive_golden_test/adaptive_golden_test.dart';
 import 'package:flutter/material.dart';
+import 'package:recase/recase.dart';
 import 'package:meta/meta.dart';
 import 'package:storybook_toolkit/storybook_toolkit.dart';
 import 'package:storybook_toolkit_tester/devices.dart';
@@ -57,7 +58,7 @@ Future<void> testStorybook(
         //await tester.expectGolden(variant);
         //await tester.tap(find.byKey(ValueKey("TestField")));
         if (story.loadDuration != null) await tester.pumpAndSettle(story.loadDuration!);
-        await tester.expectGolden<dynamic>(variant, pathBuilder: () => "goldens/${story.name}/${variant.name}.png");
+        await tester.expectGolden<dynamic>(variant, pathBuilder: () => "goldens/${story.name.snakeCase}/${variant.name.snakeCase}.png");
       },
       tags: ['storybook'],
     );

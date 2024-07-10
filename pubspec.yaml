@@ -1,6 +1,7 @@
 name: storybook_toolkit_tester
-description: "A new Flutter package project."
-version: 0.0.1
+description: "Tester package for storybook_toolkit"
+repository: https://github.com/mjablecnik/storybook_toolkit_tester
+version: 1.0.0
 
 environment:
   sdk: '>=3.4.0 <4.0.0'
@@ -10,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   meta: ^1.12.0
+  recase: ^4.1.0
   storybook_toolkit: ^1.0.0
   adaptive_golden_test: ^0.5.1
 
