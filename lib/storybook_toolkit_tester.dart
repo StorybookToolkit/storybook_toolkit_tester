@@ -59,9 +59,9 @@ Future<void> testStorybook(
         //await tester.expectGolden(variant);
         //await tester.tap(find.byKey(ValueKey("TestField")));
         if (story.loadDuration != null) await tester.pumpAndSettle(story.loadDuration!);
-        await tester.expectGolden<dynamic>(
+        await tester.expectGolden(
           variant,
-          pathBuilder: (_) => "$rootPath/${story.name.snakeCase}/${variant.name.snakeCase}.png",
+          pathBuilder: (_) => "$rootPath/${story.name.snakeCase}/${variant.name}.png",
         );
       },
       tags: ['storybook'],
