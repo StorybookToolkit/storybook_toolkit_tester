@@ -61,7 +61,11 @@ Future<void> testStorybook(
         if (story.loadDuration != null) await tester.pumpAndSettle(story.loadDuration!);
         await tester.expectGolden(
           variant,
-          pathBuilder: (_) => "$rootPath/${story.name.snakeCase}/${variant.name}.png",
+          pathBuilder: (_) {
+            final path = story.name.split('/').map((e) => e.snakeCase).join('/');
+            final fileName = variant.name;
+            return "$rootPath/$path/$fileName.png";
+          },
         );
       },
       tags: ['storybook'],
