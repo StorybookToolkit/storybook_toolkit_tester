@@ -70,7 +70,7 @@ Future<void> testStorybook(
           },
         );
       },
-      tags: ['storybook'],
+      tags: ['storybook', ...story.tags],
     );
   }
 }

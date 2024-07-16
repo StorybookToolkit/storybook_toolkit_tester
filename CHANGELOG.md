@@ -1,6 +1,7 @@
 ## 1.0.3
 
 * Fixed snake_case path building
+* Added tags
  
 ## 1.0.2
 
