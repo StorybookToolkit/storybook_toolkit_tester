@@ -16,6 +16,7 @@ Future<void> testStorybook(
   Storybook storybook, {
   Set<Device> devices = const {Device.pixel5, Device.iPhone8, Device.iPhone13},
   bool Function(Story story)? filterStories,
+  String Function(PathContext)? goldenPathBuilder,
   String rootPath = 'goldens',
 }) async {
   AdaptiveTestConfiguration.instance.setDeviceVariants({
@@ -66,7 +67,9 @@ Future<void> testStorybook(
             final fileName = "${variant.name}.png";
 
             final PathContext context = (rootPath: rootPath, path: path, file: fileName);
-            return story.goldenPathBuilder?.call(context) ?? "$rootPath/$path/$fileName";
+            return story.goldenPathBuilder?.call(context) ??
+                goldenPathBuilder?.call(context) ??
+                "$rootPath/$path/$fileName";
           },
         );
       },

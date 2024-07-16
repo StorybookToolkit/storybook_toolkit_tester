@@ -1,3 +1,7 @@
+## Unknown
+
+* Added goldenPathBuilder parameter into testStorybook
+ 
 ## 1.1.0
 
 * Fixed snake_case path building
