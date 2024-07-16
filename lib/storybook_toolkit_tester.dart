@@ -63,8 +63,10 @@ Future<void> testStorybook(
           variant,
           pathBuilder: (_) {
             final path = story.name.split('/').map((e) => e.snakeCase).join('/');
-            final fileName = variant.name;
-            return "$rootPath/$path/$fileName.png";
+            final fileName = "${variant.name}.png";
+
+            final params = (rootPath: rootPath, path: path, file: fileName);
+            return story.goldenPathBuilder?.call(params) ?? "$rootPath/$path/$fileName";
           },
         );
       },
