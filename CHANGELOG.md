@@ -1,6 +1,7 @@
-## Unknown
+## Unreleased
 
 * Added goldenPathBuilder parameter into testStorybook
+* Added DeviceInfo instead of old devices
  
 ## 1.1.0
 

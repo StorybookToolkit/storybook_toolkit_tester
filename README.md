@@ -15,7 +15,7 @@
    ```dart
    void main() => testStorybook(
      storybook,
-     devices: {Device.iPhone8, Device.iPhone13, Device.pixel5, Device.iPadPro},
+     devices: { Devices.ios.iPhoneSE, Devices.android.pixel4, Devices.ios.iPadAir4 },
      filterStories: (Story story) {
        final skipStories = [];
        return !skipStories.contains(story.name);
