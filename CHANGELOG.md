@@ -1,3 +1,6 @@
+## 1.2.0+1
+* Fixed pubspec.yaml 
+
 ## 1.2.0
 
 * Added goldenPathBuilder parameter into testStorybook

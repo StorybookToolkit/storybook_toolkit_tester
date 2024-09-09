@@ -1,7 +1,14 @@
 name: storybook_toolkit_tester
 description: "Tester package for storybook_toolkit"
-repository: https://github.com/mjablecnik/storybook_toolkit_tester
-version: 1.2.0
+repository: https://github.com/StorybookToolkit/storybook_toolkit_tester
+issue_tracker: https://github.com/StorybookToolkit/storybook_toolkit_tester/issues
+version: 1.2.0+1
+
+topics:
+  - tester
+  - golden_test
+  - storybook
+  - widgetbook
 
 environment:
   sdk: '>=3.4.0 <4.0.0'
