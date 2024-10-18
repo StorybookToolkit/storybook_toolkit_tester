@@ -1,3 +1,7 @@
+## 1.3.0
+* Updated dependencies
+* Added skip tests when some previous test failed
+
 ## 1.2.0+1
 * Fixed pubspec.yaml 
 

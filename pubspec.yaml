@@ -2,7 +2,7 @@ name: storybook_toolkit_tester
 description: "Tester package for storybook_toolkit supporting golden tests."
 repository: https://github.com/StorybookToolkit/storybook_toolkit_tester
 issue_tracker: https://github.com/StorybookToolkit/storybook_toolkit_tester/issues
-version: 1.2.0+1
+version: 1.3.0
 
 topics:
   - tester
@@ -20,7 +20,7 @@ dependencies:
   meta: ^1.12.0
   recase: ^4.1.0
   storybook_toolkit: ^1.2.0
-  adaptive_golden_test: ^1.0.0
+  adaptive_golden_test: ^1.1.0
 
 dev_dependencies:
   flutter_test:
