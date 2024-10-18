@@ -1,5 +1,6 @@
 library storybook_toolkit_tester;
 
+import 'dart:io';
 import 'dart:async';
 
 import 'package:adaptive_golden_test/adaptive_golden_test.dart';
@@ -26,10 +27,18 @@ Future<void> testStorybook(
   await loadFonts();
   setupFileComparatorWithThreshold();
 
+  Directory failuresDirectory = Directory.fromUri(Uri.parse("${Directory.current.path}/test/failures"));
+  if (failuresDirectory.existsSync()) failuresDirectory.delete(recursive: true);
+  String failedTest = '';
+
   for (final story in storybook.stories.where((s) => filterStories?.call(s) ?? true)) {
     testAdaptiveWidgets(
       'Run ${story.name} test',
       (tester, variant) async {
+        if (failuresDirectory.existsSync()) {
+          print("SKIPPED because $failedTest failed");
+          return;
+        }
         await tester.pumpWidget(
           AdaptiveWrapper(
             device: variant,
@@ -58,6 +67,9 @@ Future<void> testStorybook(
                 "$rootPath/$path/$fileName";
           },
         );
+        if (failuresDirectory.existsSync()) {
+          failedTest = story.name;
+        }
       },
       tags: ['storybook', ...story.tags],
     );
