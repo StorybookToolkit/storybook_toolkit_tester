@@ -5,7 +5,7 @@
 1. Import `storybook_toolkit_tester` package:
    ```yaml
    dev_dependencies:
-     storybook_toolkit_tester: ^1.2.0 
+     storybook_toolkit_tester: ^1.4.0-dev.0 
    ```
 
 2. Create test file, e.g. `storybook_test.dart`.

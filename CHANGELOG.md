@@ -1,8 +1,14 @@
+## 1.4.0-dev.0
+
+* Upgraded dependencies
+
 ## 1.3.0
+
 * Updated dependencies
 * Added skip tests when some previous test failed
 
 ## 1.2.0+1
+
 * Fixed pubspec.yaml 
 
 ## 1.2.0
