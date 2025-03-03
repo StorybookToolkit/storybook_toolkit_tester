@@ -1,3 +1,7 @@
+## 1.4.0-dev.1
+
+* Upgraded dependencies
+
 ## 1.4.0-dev.0
 
 * Upgraded dependencies

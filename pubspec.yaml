@@ -1,8 +1,8 @@
 name: storybook_toolkit_tester
-description: "Tester package for storybook_toolkit supporting golden tests."
+description: Tester package for storybook_toolkit supporting golden tests.
 repository: https://github.com/StorybookToolkit/storybook_toolkit_tester
 issue_tracker: https://github.com/StorybookToolkit/storybook_toolkit_tester/issues
-version: 1.4.0-dev.0
+version: 1.4.0-dev.1
 
 topics:
   - tester
@@ -11,21 +11,21 @@ topics:
   - widgetbook
 
 environment:
-  sdk: '>=3.4.0 <4.0.0'
-  flutter: ">=1.17.0"
+  sdk: '>=3.7.0 <4.0.0'
+  flutter: ">=3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   meta: ^1.12.0
   recase: ^4.1.0
-  storybook_toolkit: ^2.0.0-dev.0
-  adaptive_golden_test: ^1.1.0
+  storybook_toolkit: ^2.0.0-dev.1
+  adaptive_golden_test: ^1.2.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
