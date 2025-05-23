@@ -1,5 +1,3 @@
-library storybook_toolkit_tester;
-
 import 'dart:io';
 import 'dart:async';
 
